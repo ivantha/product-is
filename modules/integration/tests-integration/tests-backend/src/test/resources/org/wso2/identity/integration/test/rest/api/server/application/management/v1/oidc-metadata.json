@@ -14,6 +14,7 @@
       "urn:ietf:params:oauth:grant-type:jwt-bearer"
     ]
   },
+  "defaultAuthorizationCodeValidityPeriod": "300",
   "defaultUserAccessTokenExpiryTime": "3600",
   "defaultApplicationAccessTokenExpiryTime": "3600",
   "defaultRefreshTokenExpiryTime": "86400",

@@ -25,6 +25,7 @@ import javax.validation.Valid;
 public class OIDCMetaData  {
   
     private MetadataProperty allowedGrantTypes;
+    private String defaultAuthorizationCodeValidityPeriod;
     private String defaultUserAccessTokenExpiryTime;
     private String defaultApplicationAccessTokenExpiryTime;
     private String defaultRefreshTokenExpiryTime;
@@ -58,6 +59,18 @@ public class OIDCMetaData  {
 
         this.defaultUserAccessTokenExpiryTime = defaultUserAccessTokenExpiryTime;
         return this;
+    }
+
+    @ApiModelProperty(example = "300", value = "")
+    @JsonProperty("defaultAuthorizationCodeValidityPeriod")
+    @Valid
+    public String getDefaultAuthorizationCodeValidityPeriod() {
+
+        return defaultAuthorizationCodeValidityPeriod;
+    }
+    public void setAuthorizationCodeValidityPeriod(String defaultAuthorizationCodeValidityPeriod) {
+
+        this.defaultAuthorizationCodeValidityPeriod = defaultAuthorizationCodeValidityPeriod;
     }
     
     @ApiModelProperty(example = "3600", value = "")
